@@ -1,13 +1,13 @@
 #![cfg_attr(feature = "nightly", feature(unwind_attributes))]
 #![cfg_attr(feature = "asm", feature(asm, naked_functions))]
 
-extern crate gimli;
-extern crate libc;
-extern crate fallible_iterator;
+pub use fallible_iterator::FallibleIterator;
+
 #[macro_use] extern crate log;
 
-use gimli::{UnwindSection, UnwindTable, UnwindTableRow, EhFrame, BaseAddresses, UninitializedUnwindContext, Pointer, Reader, EndianSlice, NativeEndian, CfaRule, RegisterRule, EhFrameHdr, ParsedEhFrameHdr, X86_64};
-use fallible_iterator::FallibleIterator;
+use gimli::{UnwindSection, UnwindTable, UnwindTableRow, EhFrame, BaseAddresses, UninitializedUnwindContext, Pointer, Reader, EndianSlice, NativeEndian, CfaRule, RegisterRule, EhFrameHdr, ParsedEhFrameHdr};
+
+pub use gimli::X86_64;
 
 mod registers;
 mod find_cfi;

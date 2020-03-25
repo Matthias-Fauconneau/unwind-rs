@@ -1,5 +1,5 @@
 use gimli::X86_64;
-use registers::Registers;
+use crate::registers::Registers;
 
 type UnwindPayload<'a> = &'a mut dyn FnMut(Registers);
 

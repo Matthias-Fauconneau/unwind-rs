@@ -2,6 +2,7 @@
 name = "unwind"
 version = "0.1.0"
 authors = ["main() <main@ehvag.de>"]
+edition = '2018'
 
 [dependencies]
 gimli = "0.18"
